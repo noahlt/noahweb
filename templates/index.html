@@ -1,0 +1,209 @@
+<html>
+
+<head>
+  <title>Noah Tye</title>
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Muli" rel="stylesheet" />
+  <link href="/assets/page.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <style type="text/css">
+    .home.margins {
+      max-width: 500px;
+    }
+
+    /* scramble grid */
+
+    table * {
+      font-family: Helvetica, sans-serif;
+    }
+
+    table {
+      margin-top: 3rem;
+      /* hack to visually align left edge */
+      margin-left: -5px;
+      margin-bottom: 4rem;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+
+    td {
+      width: 20px;
+      padding: 0;
+      text-align: center;
+      cursor: default;
+    }
+
+    table a {
+      text-align: center;
+      display: table-cell;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    table a:hover .link-text {
+      color: #11b;
+    }
+
+    table a:hover td {
+      cursor: pointer;
+    }
+
+    td.highlight,
+    tr.highlight a {
+      color: #44e;
+    }
+
+    /* blog posts */
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin: 0.25rem 0 0.5rem;
+    }
+
+    h2 a {
+      text-decoration: none;
+      border-bottom: 1px solid #11b;
+    }
+
+    h2 a:hover {
+      border-bottom: 1px solid #44e;
+    }
+
+    h2 .date {
+      font-size: 1rem;
+      color: #aaa;
+      padding-left: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="home layout margins">
+    <table id="grid"></table>
+    <div>
+      {% for post in blog_posts %}
+      <h2><a href="{{ post.url }}">{{ post.title }}</a><span class="date">{{ post.date }}</span></h2>
+      <p>{{ post.desc }}</p>
+      {% endfor %}
+    </div>
+  </div>
+  <footer>
+    <div class="margins">
+      <p>
+        License: <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons
+          Attribution-NonCommercial 4.0 International License</a>
+      </p>
+    </div>
+  </footer>
+  <script type="text/javascript">
+    entries = [
+      '',
+      '',
+      'noah tye|http://noahtye.com',
+      'bricoleur|http://www.bricoleur.org/2002/10/why-bricoleur.html',
+      'at runkit|http://www.runkit.com',
+      '',
+      'twitter|http://twitter.com/noahlt',
+      'github|http://github.com/noahlt',
+      'email|mailto:hi@noahtye.com',
+      '',
+      '',
+    ].map(function (entry) {
+      var parts = entry.split('|');
+      return {
+        text: parts[0].toUpperCase(),
+        url: parts[1],
+      };
+    });
+    function randChar() {
+      var range = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      return range[randInt(range.length)];
+    }
+    function randInt(n) {
+      return Math.floor(Math.random() * n);
+    }
+    function repeat(pattern, count) {
+      if (count < 1) return '';
+      var result = '';
+      while (count > 1) {
+        if (count & 1) result += pattern;
+        count >>= 1, pattern += pattern;
+      }
+      return result + pattern;
+    }
+    COLUMNS = 20;
+    SWAP_DELAY = 50;
+    MAX_SWAPS = 20;
+    LEFT_MARGIN = 3;
+    X = '.';
+    function makeSwapper(elt, finalChar) {
+      return function () {
+        elt.dataset.remainingSwaps--;
+        if (elt.dataset.remainingSwaps > 0) {
+          elt.textContent = randChar();
+          window.setTimeout(makeSwapper(elt, finalChar), SWAP_DELAY);
+        } else if (elt.dataset.remainingSwaps <= 0) {
+          elt.textContent = finalChar;
+          if (elt.tagName == 'A') {
+            if (finalChar == ' ') {
+              elt.textContent = X;
+            }
+            elt.className = 'link-text';
+          }
+        }
+      };
+    }
+    scrambleCallbacks = [];
+    function scramble() {
+      var t1 = Date.now();
+      scrambleCallbacks.forEach(function (callback) {
+        clearTimeout(callback);
+      });
+      var t2 = Date.now();
+      console.log('time to clear callbacks', t2 - t1);
+      grid = document.getElementById('grid');
+      grid.innerHTML = '';
+      entries.map(function (entry, i) {
+        var tr = document.createElement('tr');
+        var rowString = repeat(X, LEFT_MARGIN) +
+          entry.text +
+          repeat(X, COLUMNS - entry.text.length - LEFT_MARGIN);
+        rowString.split('').map(function (finalChar) {
+          var td;
+          if (entry.url && finalChar != X) {
+            td = document.createElement('a');
+            td.href = entry.url;
+            td.addEventListener('mouseenter', function (evt) {
+              evt.target.parentElement.classList.add('highlight');
+            });
+            td.addEventListener('mouseleave', function (evt) {
+              evt.target.parentElement.classList.remove('highlight');
+            });
+          } else {
+            td = document.createElement('td');
+            td.addEventListener('click', function (evt) {
+              scramble();
+            });
+          }
+          td.textContent = randChar();
+          td.dataset.remainingSwaps = randInt(MAX_SWAPS);
+          if (finalChar == X) {
+            td.addEventListener('mouseenter', function (evt) {
+              window.setTimeout(makeSwapper(evt.target, finalChar), SWAP_DELAY);
+              evt.target.dataset.remainingSwaps = Infinity;
+            });
+            td.addEventListener('mouseleave', function (evt) {
+              evt.target.dataset.remainingSwaps = randInt(MAX_SWAPS);
+            });
+          }
+          tr.appendChild(td);
+          scrambleCallbacks.push(window.setTimeout(makeSwapper(td, finalChar), SWAP_DELAY));
+        });
+        grid.appendChild(tr);
+      });
+    }
+    scramble();
+  </script>
+</body>
+
+</html>
