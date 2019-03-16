@@ -22,14 +22,17 @@ ASSETS_REL = 'assets'
 
 print(f'reading content from {CONTENT_DIR}')
 
-# Delete old stuff
-
-for filename in os.listdir(OUTPUT_DIR):
-    filepath = path.join(OUTPUT_DIR, filename)
-    if path.isdir(filepath) and not path.islink(filepath):
-        shutil.rmtree(filepath)
-    elif path.exists(filepath):
-        os.remove(filepath)
+if os.isdir(OUTPUT_DIR):
+    # Delete old stuff
+    for filename in os.listdir(OUTPUT_DIR):
+        filepath = path.join(OUTPUT_DIR, filename)
+        if path.isdir(filepath) and not path.islink(filepath):
+            shutil.rmtree(filepath)
+        elif path.exists(filepath):
+            os.remove(filepath)
+else:
+    # Create output dir
+    os.mkdir(OUTPUT_DIR)
 
 #
 # Set up Markdown
