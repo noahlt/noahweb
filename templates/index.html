@@ -4,6 +4,7 @@
   <title>Noah Tye</title>
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Muli" rel="stylesheet" />
   <link href="/assets/page.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
   <meta charset="UTF-8">
   <style type="text/css">
     .home.margins {
@@ -82,7 +83,7 @@
     <table id="grid"></table>
     <div>
       {% for post in blog_posts %}
-      <h2><a href="{{ post.url }}">{{ post.title }}</a><span class="date">{{ post.date }}</span></h2>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a><span class="date">{{ post.nice_date }}</span></h2>
       <p>{{ post.desc }}</p>
       {% endfor %}
     </div>

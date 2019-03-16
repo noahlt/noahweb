@@ -5,13 +5,14 @@
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Muli" rel="stylesheet" />
   <link href="/assets/page.css" rel="stylesheet" />
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
 </head>
 
 <body>
-  <div class="layout margins">
+  <div class="margins layout">
     <h1>{{ title }}</h1>
     <div class="blog-post-metadata">
-      {{ date }} ・ {{ loc }}
+      {{ nice_date }} ・ {{ loc }}
     </div>
     {{ body }}
   </div>

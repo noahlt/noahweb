@@ -112,3 +112,18 @@ body > footer a:hover {
 h1 + .blog-post-metadata {
   margin-top: -1em;
 }
+
+@media (max-width: 600px) {
+  .layout {
+    padding-top: 0;
+  }
+  .margins, .layout.margins {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .margins img {
+    margin-left: -1rem;
+    margin-right: 1rem;
+    max-width: calc(100% + 2rem);
+  }
+}

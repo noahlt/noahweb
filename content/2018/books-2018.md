@@ -11,15 +11,13 @@ I didn't read as many books as I would have liked in 2018. I spent less time rea
 
 This book is about reading, not just for information, but for understanding. How can we learn from a book, that is, how can we learn when no teacher is present?
 
-A friend of mine used to amuse themself by holding this book upside-down while riding the subway.
+A friend of mine used to amuse himself by holding this book upside-down while riding the subway.
 
 ## The Odyssey (tr Emily Wilson)
 
-I first read the Odyssey during the summer that I moved to San Francisco for my first job.
+I first read the Odyssey during the summer that I moved to San Francisco for my first job.  At the time, I was somewhat adrift. I had been disappointed with school, and the feeling was mutual. An ingrained sense of meritocracy made me doubt myself: if I wasn't winning, then didn't that make me, well, a _loser_?
 
-At the time, I was somewhat adrift. I had been disappointed with school, and the feeling was mutual. An ingrained sense of meritocracy made me doubt myself: if I wasn't winning, then didn't that make me, well, a _loser_?
-
-The Odyssey showed me a man who hasn‘t been winning, but is far from a loser. Odysseus is wandering, at times he is literally adrift in the wine-dark sea, but he is a hero the whole way through. Reading the Odyssey as a young man was a vital part of building a resilient self-image.
+The Odyssey showed me a man who hasn‘t been winning, but is far from a loser. Odysseus is wandering, at times he is literally adrift in the wine-dark sea, but he has integrity the whole way through. Reading the Odyssey as a young man was a vital part of building a resilient self-image.
 
 That time, of course, I was reading the Fagles translation. This year I read the excellent new translation by Emily Wilson. It’s written in metered verse, and it’s beautiful. Just read the opening:
 
@@ -37,9 +35,11 @@ That time, of course, I was reading the Fagles translation. This year I read the
 
 You will have noticed that the style is modern rather than archaic. Wilson's excellent justification is that Homer’s culture was totally unrelated to Milton and Shakespeare; there's no reason to make Homer sound like them.
 
-Going further, Wilson acknowledges the different and, really, alien virtues of Homeric culture. Every translation glorifies Odysseus’ _metis_ (loosely, “cunning”), but Wilson also emphasizes the Homeric take on friendship, the Greek virtue of hospitality, and (through Telemachus) a healthy attitude towards coming-of-age.
+Wilson acknowledges the different and, really, alien virtues of Homeric culture. Every translation glorifies Odysseus’ _metis_ (loosely, “cunning”), but Wilson also emphasizes the Homeric take on friendship, the Greek virtue of hospitality, and (through Telemachus) a healthy attitude towards coming-of-age.
 
 Wilson also, unlike some other translations, doesn't try to impose our culture’s values on the Odyssey, and doesn’t gloss over anything we might find unacceptable. She never translates “slave” as “servant”. But she also doesn't insert misogynistic language, as Fagles does when he has Telemachus call the slave girls “sluts”. Nor does she add new value judgments; Polyphemus the Cyclops is not a “monster” (as Fagles would have him), but a “person”. Much of this is treated in the translation's introduction. Wilson also discusses translation on her fantastic Twitter account, [@EmilyRCWilson](https://twitter.com/EmilyRCWilson), and many of her threads on translation [have been collected here](https://www.emilyrcwilson.com/emilyrcwilson-scholia).
+
+Finally, a note for parents: in a podcast interview, Wilson was asked whether the Odyssey is appropriate for children.  Wilson responded that many of the poem’s themes are questions that children understand, because they are real problems for children as well as adults: Who is family?  Who is allowed to enter our home, and what are they allowed to do there?  How do I treat strangers?  What should I do when I’m lost?
 
 The Odyssey is a profound book that deeply influenced me; this new translation is readable, thought-provoking, and fresh.  You should read it.
 
@@ -47,7 +47,7 @@ The Odyssey is a profound book that deeply influenced me; this new translation i
 
 This is a better Victorian romance than Pride and Prejudice. But it also is a wonderful reflection on clashing cultures: rich and poor, new and old money, companies and unions, religious and atheist, rural and urban, pragmatic and aesthetic, and, of course, North and South (of England, that is). Anyone concerned about culture clashes, especially where one side is technological, will find it worthwhile. And it really is a great romance novel.
 
-This book is available on Project Gutenberg, which I wish I'd realized before buying the Amazon Kindle version.
+This book is available on Project Gutenberg, which I wish I'd noticed before buying the Amazon Kindle version.
 
 ## Phaedrus (Plato)
 

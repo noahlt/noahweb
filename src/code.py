@@ -4,9 +4,12 @@ from markdown.preprocessors import Preprocessor
 import markdown
 import os
 import os.path as path
+from operator import itemgetter
+import dateutil.parser
 import markdown
 import shutil
 import re
+import sys
 from wand.image import Image
 from jinja2 import FileSystemLoader, Environment, select_autoescape
 
@@ -104,6 +107,9 @@ for dirname, subdirnames, filenames in os.walk(CONTENT_DIR):
             template_context = {}
             with open(infilepath, 'r') as mdfile:
                 print(f' - converting markdown')
+                # Unfortunately, python-markdown gives us no way to pass
+                # parameters (such as the current working directory) to the
+                # preprocessor extension, so we use this global to do so.
                 CWD_HACK = path.relpath(dirname)
                 template_context['body'] = md.convert(mdfile.read())
             # The following line tells pylint to disregard the fact that the
@@ -119,9 +125,20 @@ for dirname, subdirnames, filenames in os.walk(CONTENT_DIR):
                 if 'date' in md.Meta:
                     blog_data = md.Meta.copy()
                     blog_data['url'] = path.join('/', relpath, base+'.html')
+                    try:
+                        blog_date = dateutil.parser.parse(blog_data['date'])
+                    except ValueError:
+                        print(f'ERROR: invalid date: {blog_date} in {infilepath}')
+                        sys.exit(1)
+                    blog_data['nice_date'] = blog_date.strftime('%-d %b %Y')
+                    print(f'type of blog_data is {type(blog_data)}, {blog_data.keys()}')
+                    print(f'date for {infilepath} is {blog_data["date"]} vs {blog_data["nice_date"]}')
                     blog_posts.append(blog_data)
-                template_context.update(md.Meta)
+                    template_context.update(blog_data)
+                else:
+                    template_context.update(md.Meta)
             blog_template = templates.get_template('blogpost.html')
+            print(f'template_context.date = {template_context["date"]}, template_context.nice_date = {template_context["nice_date"]}')
             html = blog_template.render(template_context)
             htmldir = path.join(OUTPUT_DIR, relpath)
             if not os.path.exists(htmldir):
@@ -154,6 +171,7 @@ for dirname, subdirnames, filenames in os.walk(CONTENT_DIR):
                 f'❌ unknown extension for {path.join(relpath, filename)}: "{ext}"')
 
 print('🏠 generating home page')
+blog_posts.sort(key=itemgetter('date'), reverse=True)
 index_html = templates.get_template('index.html').render(blog_posts=blog_posts)
 with open(path.join(OUTPUT_DIR, 'index.html'), 'w') as index_file:
     index_file.write(index_html)

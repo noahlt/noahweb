@@ -55,11 +55,11 @@ As it turned out, our most successful evening of chasing tornadoes was in Kansas
 
 The gathering must have appeared, to an outsider, similar to many other modern, mediocre social events — there was not much conversation, because everyone was staring at their phones. A closer observer, though, might have likened it to a football watching party, because they all were looking at (and commenting on) the same thing: weather radar and observations. Introductions and small talk were punctuated by chasers periodically commenting on a storm forming or turning towards an area with higher humidity.
 
-Around 3:30, one of the storms to our south started picking up. One pair of storm chasers decided to pack up and head that way. Another group followed, and another, and suddenly Jim and I were sitting alone on the grass munching our snacks. I meekly asked the obvious question.
+Around 3:30, two of the storms to our north started picking up. One pair of storm chasers decided to pack up and head that way. Another group followed, and another, and suddenly Jim and I were sitting alone on the grass munching our snacks. I meekly asked the obvious question.
 
 “Everyone else is gone. Should we head out, too?”
 
-“Nah. I don’t like that storm to the north as much as the southerly one. More moisture farther south. That one’s closer to us, so we have some time.”
+“Nah. I don’t like the storm farther to the north as much as the southerly one. More moisture farther south. That one’s closer to us, so we have some time.”
 
 We eventually got in the car, me driving and Jim watching the weather radar and road maps to tell me where to go. We drove north for about an hour, then cut west until we caught sight of the storm. We found a hill with a clear view, and pulled off the road to watch.
 
