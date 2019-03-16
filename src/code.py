@@ -22,7 +22,7 @@ ASSETS_REL = 'assets'
 
 print(f'reading content from {CONTENT_DIR}')
 
-if os.isdir(OUTPUT_DIR):
+if path.isdir(OUTPUT_DIR):
     # Delete old stuff
     for filename in os.listdir(OUTPUT_DIR):
         filepath = path.join(OUTPUT_DIR, filename)
