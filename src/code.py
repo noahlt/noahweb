@@ -60,10 +60,10 @@ class ImagePreprocessor(Preprocessor):
                     base, ext = path.splitext(imgpath)
                     if img.width > 1200:  # 2x 600px wide
                         new_lines.append(
-                            f'[<img src="{base}.600{ext}" srcset="{base}.1200{ext} 2x">]({imgpath}){rest_of_line}')
+                            f'[<img src="{base}.600{ext}" srcset="{base}.1200{ext} 2x" width="{600}" height="{600 * img.height / img.width}">]({imgpath}){rest_of_line}')
                     else:
                         new_lines.append(
-                            f'[<img src="{base}.600{ext}" srcset="{imgpath} 2x">]({imgpath}){rest_of_line}')
+                            f'[<img src="{base}.600{ext}" srcset="{imgpath} 2x" width="{600}" height="{600 * img.height / img.width}">]({imgpath}){rest_of_line}')
                     # todo: theoretical case for img.width < 600
             else:
                 new_lines.append(line)
@@ -131,17 +131,21 @@ for dirname, subdirnames, filenames in os.walk(CONTENT_DIR):
                     try:
                         blog_date = dateutil.parser.parse(blog_data['date'])
                     except ValueError:
-                        print(f'ERROR: invalid date: {blog_date} in {infilepath}')
+                        print(
+                            f'ERROR: invalid date: {blog_date} in {infilepath}')
                         sys.exit(1)
                     blog_data['nice_date'] = blog_date.strftime('%-d %b %Y')
-                    print(f'type of blog_data is {type(blog_data)}, {blog_data.keys()}')
-                    print(f'date for {infilepath} is {blog_data["date"]} vs {blog_data["nice_date"]}')
+                    print(
+                        f'type of blog_data is {type(blog_data)}, {blog_data.keys()}')
+                    print(
+                        f'date for {infilepath} is {blog_data["date"]} vs {blog_data["nice_date"]}')
                     blog_posts.append(blog_data)
                     template_context.update(blog_data)
                 else:
                     template_context.update(md.Meta)
             blog_template = templates.get_template('blogpost.html')
-            print(f'template_context.date = {template_context["date"]}, template_context.nice_date = {template_context["nice_date"]}')
+            print(
+                f'template_context.date = {template_context["date"]}, template_context.nice_date = {template_context["nice_date"]}')
             html = blog_template.render(template_context)
             htmldir = path.join(OUTPUT_DIR, relpath)
             if not os.path.exists(htmldir):

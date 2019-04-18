@@ -9,7 +9,7 @@ IMG: ./TSAS_1_open_field.png
 
 In high school, I asked my friend Jim why his AOL screen name was “wxmann”. He explained that it stood for “weatherman”, and he’d picked it because he loved the weather. I voiced my assumption that he wanted to work as a meteorologist after school, but he laughed and said, no, he was going to get a job that actually paid well.
 
-A decade later, Jim is happily employed as a software engineer in San Francisco, but he still loves the weather. When tornado conditions suddenly developed on the Great Plains, he publicly deliberated, on Twitter, whether or not to go tornado chasing on the spur of the moment. I texted him to say I’d go with him, and so, at 1am a couple of days later, we boarded a budget redeye flight to Denver, with a rental car waiting for us when we arrived.
+A decade later, Jim is happily employed as a software engineer in San Francisco, but he still loves the weather. When tornado conditions suddenly developed on the Great Plains, he publicly deliberated, on Twitter, whether or not to go tornado chasing on the spur of the moment. I texted him to say I’d go with him, and so, at 1:00 AM a couple of days later, we boarded a budget redeye flight to Denver, with a rental car waiting for us when we arrived.
 
 This trip not only let me see a tornado, but also completely changed the way I think about the weather. As we waited at baggage claim, groggy after three hours of sleep on cheap plane seats, Jim pulled up this image on his laptop:
 
@@ -27,7 +27,7 @@ A car, along with a good road network like the one in Kansas, lets you act on th
 
 IMG: ./TSAS_3_open_road.png
 
-A typical day went like this: in the morning, Jim would identify an area where storms might develop tornadoes, and we would drive for three or four hours to get there. Then we’d camp out at a local library or cafe and do some work in the afternoon. Around 4pm, storms start picking up. That’s when you can see them on radar and get a sense of where they’re moving and which ones are likely to generate tornadoes. At this point, we’d kick into high gear and drive for about an hour to the nearest tornado.
+A typical day went like this: in the morning, Jim would identify an area where storms might birth tornadoes, and we would drive for three or four hours to get there. Then we’d camp out at a local library or cafe and do some work in the afternoon. Around four o’clock, storms start picking up. That’s when you can see them on radar and get a sense of where they’re moving and which ones are likely to generate tornadoes. At this point, we’d kick into high gear and drive for about an hour to the most promising storm.
 
 With me behind the wheel and Jim keeping an eye on the weather radar and observations, for the next three or four hours we would track the tornado. It goes the way I imagine stalking big game, except on the scale of dozens of miles. We’d pull over by the side of the road to watch the storm from a safe place a couple of miles away, a distance where a storm looks like a discrete object the same way it looks like a discrete object on radar. Then after ten or twenty minutes we’d hit the road again, driving mostly-eastward to stay ahead of the storm. We stayed southeast of the storms, since they generally move east and northeast.
 
@@ -85,7 +85,7 @@ IMG: ./TSAS_9_touchdown.png <cite>Photo by Jim Tang</cite>
 
 Some of the other chasers whooped and hollered. I stood, silent and transfixed. A tornado is powerfully destructive, yet from a distance this one looked smooth and tranquil. As we'd seen just a moment before, a new tornado is delicate, and can fall apart just as soon as it forms. Watching a tornado touch down is a privilege, like watching a bird first take flight.
 
-But we couldn’t stand around. In accord with Jim’s forecast, the storm was gaining energy as it moved east, and now it was moving much faster; meanwhile, we’d been in one spot gawking as the tornado passed us by. So we all piled into our cars and tried to keep up.
+But we couldn’t dawdle. In accord with Jim’s forecast, the storm was gaining energy as it moved east, and now it was moving much faster; meanwhile, we’d been in one spot gawking as the tornado passed us by. So we all piled into our cars and tried to keep up.
 
 The most dangerous part of tornado chasing is driving. The roads are often wet, there’s sometimes debris from tornado damage, and — most surprising to me — these days the number of storm chasers driving to keep pace with a storm actually creates more traffic than the small country roads can handle.
 
